@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>tamanhos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Tamanhos</ion-label>
+      <ion-select [(ngModel)]="idTam" (ionChange)="onChange()">
+          <ion-option *ngFor="let tam of listaTamanhos" value={{tam.id}}>{{tam.name}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<br><br>
+
+<ion-list-header><h2>Sabores</h2></ion-list-header>
+  <ion-list>
+
+            <ion-item *ngFor="let sab of listaSabores">
+                <ion-label>
+                    {{sab.sabor}}
+                </ion-label>
+                <div class="item-note" item-end>
+                   R$ {{sab.preco}}
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-footer no-shadow>
+        <button ion-button full (click)="dadosEntrega()">Dados da Entrega</button>
+      </ion-footer>
+</ion-content>
