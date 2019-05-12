@@ -10,7 +10,7 @@ export class Toasted{
     const toast = this.toastCtrl.create({
       message: mensagem,
       duration: 3000,
-      position: 'top'
+      position: 'bottom'
     });
     toast.present();
   }

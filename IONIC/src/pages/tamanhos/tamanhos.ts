@@ -18,7 +18,7 @@ import { EnderecoPage } from '../endereco/endereco';
 })
 export class TamanhosPage {
   public listaTamanhos = [];
-  public idTam : any;
+  public id_Tam : any;
   public listaSabores = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, private tamanhos : TamanhosProvider,private sabores : SaboresProvider) {
   }
@@ -34,7 +34,7 @@ export class TamanhosPage {
     )
   }
   onChange(){
-    this.sabores.sabores(this.idTam).subscribe(
+    this.sabores.sabores(this.id_Tam).subscribe(
     (data : any) => {
       this.listaSabores = data;
 

@@ -23,7 +23,7 @@ export class HomePage {
 
   }
   public showToast(){
-    this.toast.presentToast("TASTY");
+    this.toast.presentToast("Voçe apertou o botão, uau!");
   }
 
   public limparAlunos(){

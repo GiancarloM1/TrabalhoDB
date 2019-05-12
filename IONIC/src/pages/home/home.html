@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <button ion-button primary (click)="showMessage()">Mostrar Mensagem</button>
+    <button ion-button primary (click)="showToast()">Mostrar Toast</button>
+    <div *ngIf="exibirConteudo">
+    </div>
+  </ion-content>
+  

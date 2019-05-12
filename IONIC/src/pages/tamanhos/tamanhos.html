@@ -15,7 +15,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Tamanhos</ion-label>
-      <ion-select [(ngModel)]="idTam" (ionChange)="onChange()">
+      <ion-select [(ngModel)]="id_Tam" (ionChange)="onChange()">
           <ion-option *ngFor="let tam of listaTamanhos" value={{tam.id}}>{{tam.name}}</ion-option>
 
       </ion-select>

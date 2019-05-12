@@ -17,8 +17,8 @@ import { BairrosProvider } from '../../providers/bairros';
 })
 export class EnderecoPage {
   public listaCidades = [];
-  public idCity : any;
-  public idBairro : any;
+  public id_cidade : any;
+  public id_Bairro : any;
   public listaBairros = [];
   public exibirConteudo : boolean = false;
 
@@ -29,8 +29,8 @@ export class EnderecoPage {
     this.listaBairros = [];
     this.listaCidades = [];
     this.exibirConteudo = false;
-    this.idCity = null;
-    this.idBairro = null;
+    this.id_cidade = null;
+    //this.id_Bairro = null;
 
     this.cidades.cidades().subscribe(
       (data : any) => {
@@ -43,7 +43,7 @@ export class EnderecoPage {
     )
   }
   onChange(){
-    this.bairros.bairros(this.idCity).subscribe(
+    this.bairros.bairros(this.id_cidade).subscribe(
     (data : any) => {
       this.listaBairros = data;
       console.log(this.listaBairros);
@@ -55,7 +55,7 @@ export class EnderecoPage {
   )
   }
   onChangeBairros(){
-    if(this.idBairro != null){
+    if(this.id_Bairro != null){
     this.exibirConteudo = true;
     }else{
       this.exibirConteudo = false;
