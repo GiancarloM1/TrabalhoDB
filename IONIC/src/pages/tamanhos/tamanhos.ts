@@ -26,6 +26,8 @@ export class TamanhosPage {
   ionViewDidLoad() {
     this.tamanhos.tamanhos().subscribe(
       (data : any) => {
+        console.log("Tamanjos");
+        console.log(data);
         this.listaTamanhos = data;
       },
       (error : any) => {

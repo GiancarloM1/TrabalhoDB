@@ -26,14 +26,16 @@ export class EnderecoPage {
   }
 
   ionViewDidLoad() {
+    console.log("Chamdo");
     this.listaBairros = [];
     this.listaCidades = [];
     this.exibirConteudo = false;
     this.id_cidade = null;
-    //this.id_Bairro = null;
+    this.id_Bairro = null;
 
     this.cidades.cidades().subscribe(
       (data : any) => {
+        console.log(this.id_cidade);
         this.listaCidades = data;
         console.log(this.listaCidades);
       },
@@ -46,9 +48,10 @@ export class EnderecoPage {
     this.bairros.bairros(this.id_cidade).subscribe(
     (data : any) => {
       this.listaBairros = data;
-      console.log(this.listaBairros);
     },
     (error : any) => {
+      console.log("error");
+      console.log(this.id_cidade);
       console.log(error);
     }
 

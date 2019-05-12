@@ -22,7 +22,7 @@
     <ion-item>
       <ion-label>Cidades</ion-label>
       <ion-select [(ngModel)]="id_cidade" (ionChange)="onChange()">
-          <ion-option *ngFor="let cit of listaCidades" value={{cit.id}}>{{cit.name}}</ion-option>
+          <ion-option *ngFor="let cit of listaCidades" value={{cit.id_cidade}}>{{cit.name}}</ion-option>
 
       </ion-select>
     </ion-item>
@@ -32,7 +32,7 @@
     <ion-item>
       <ion-label>Bairros</ion-label>
       <ion-select [(ngModel)]="id_Bairro" (ionChange)="onChangeBairros()">
-          <ion-option *ngFor="let bairro of listaBairros">{{bairro.name}}</ion-option>
+          <ion-option *ngFor="let bairro of listaBairros" >{{bairro.name}}</ion-option>
 
       </ion-select>
     </ion-item>
