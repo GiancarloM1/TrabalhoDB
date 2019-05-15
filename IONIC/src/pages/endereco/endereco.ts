@@ -26,7 +26,6 @@ export class EnderecoPage {
   }
 
   ionViewDidLoad() {
-    console.log("Chamdo");
     this.listaBairros = [];
     this.listaCidades = [];
     this.exibirConteudo = false;
